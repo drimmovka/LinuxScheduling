@@ -1,0 +1,15 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 142728  142728    1      -   0 TS    6 sudo
+ 142729  142729   11      -   0 TS    0 policy
+ 142729  142731   11     30   - RR    0 policy
+ 142729  142732   11     30   - RR    0 policy
+ 142729  142733   11     30   - RR    0 policy
+ 142729  142734   11     30   - RR    0 policy
+ 142729  142735   11     30   - RR    0 policy
+ 142729  142736   11     30   - RR    0 policy
+ 142729  142737   11     30   - RR    0 policy
+ 142729  142738   11     30   - RR    0 policy
+ 142729  142739   11     30   - RR    0 policy
+ 142729  142740   11     30   - RR    0 policy
+ 142741  142741    1      -   0 TS    0 sh
+ 142751  142751    1      -   0 TS    0 ps

@@ -1,0 +1,15 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 145018  145018    1      -   0 TS    4 sudo
+ 145019  145019   11      -   0 TS    0 policy
+ 145019  145021   11      -   0 TS    0 policy
+ 145019  145022   11     30   - FF    0 policy
+ 145019  145023   11      -   0 TS    0 policy
+ 145019  145024   11      -   0 TS    0 policy
+ 145019  145025   11     30   - FF    0 policy
+ 145019  145026   11     30   - FF    0 policy
+ 145019  145027   11     30   - FF    0 policy
+ 145019  145028   11      -   0 TS    0 policy
+ 145019  145029   11     30   - FF    0 policy
+ 145019  145030   11     30   - FF    0 policy
+ 145031  145031    1      -   0 TS    0 sh
+ 145032  145032    1      -   0 TS    0 ps

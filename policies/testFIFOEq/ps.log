@@ -1,0 +1,14 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 124659  124659    1      -   0 TS    1 sudo
+ 124660  124660   10      -   0 TS    0 policy
+ 124660  124663   10     30   - FF    0 policy
+ 124660  124664   10     30   - FF    0 policy
+ 124660  124665   10     30   - FF    0 policy
+ 124660  124666   10     30   - FF    0 policy
+ 124660  124667   10     30   - FF    0 policy
+ 124660  124668   10     30   - FF    0 policy
+ 124660  124669   10     30   - FF    0 policy
+ 124660  124670   10     30   - FF    0 policy
+ 124660  124671   10     30   - FF    0 policy
+ 124672  124672    1      -   0 TS    0 sh
+ 124692  124692    1      -   0 TS    0 ps

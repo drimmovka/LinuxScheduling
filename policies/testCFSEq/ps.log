@@ -1,0 +1,15 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 116555  116555    1      -   0 TS    3 sudo
+ 116556  116556   11      -   0 TS    0 policy
+ 116556  116558   11      -   0 TS    0 policy
+ 116556  116559   11      -   0 TS    0 policy
+ 116556  116560   11      -   0 TS    0 policy
+ 116556  116561   11      -   0 TS    0 policy
+ 116556  116562   11      -   0 TS    0 policy
+ 116556  116563   11      -   0 TS    0 policy
+ 116556  116564   11      -   0 TS    0 policy
+ 116556  116565   11      -   0 TS    0 policy
+ 116556  116566   11      -   0 TS    0 policy
+ 116556  116567   11      -   0 TS    0 policy
+ 116568  116568    1      -   0 TS    0 sh
+ 116569  116569    1      -   0 TS    0 ps

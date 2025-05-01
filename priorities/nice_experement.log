@@ -1,0 +1,124 @@
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+➜  priorities sudo ./container.sh
+[root@ca900302a985 /]# cd src/
+
+top - 23:07:15 up 11:22,  0 users,  load average: 1.36, 0.97, 1.17
+Tasks:   2 total,   1 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  3.3 us,  1.7 sy,  0.0 ni, 95.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 15714796 total,  3327120 free,  7766568 used,  4621108 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  7243148 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.01 bash
+     15 root      20   0   56068   3768   3384 R   0.0  0.0   0:00.00 top
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+[root@ca900302a985 src]# ./spin.sh &
+[1] 16
+
+top - 23:07:45 up 11:22,  0 users,  load average: 1.55, 1.05, 1.19
+Tasks:   3 total,   2 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 15.4 us,  0.0 sy,  0.0 ni, 83.7 id,  0.8 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 15714796 total,  3273696 free,  7827980 used,  4613120 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  7187904 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+     16 root      20   0   11704   2580   2452 R 100.0  0.0   0:02.45 spin.sh
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.01 bash
+     17 root      20   0   56068   3664   3280 R   0.0  0.0   0:00.00 top
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+[root@ca900302a985 src]# ./spin.sh & ./spin.sh & ./spin.sh & 
+[2] 18
+[3] 19
+[4] 20
+
+top - 23:11:14 up 11:26,  0 users,  load average: 4.35, 2.16, 1.56
+Tasks:   6 total,   5 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 17.2 us,  1.6 sy,  0.0 ni, 81.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem : 15714796 total,  3293532 free,  7806840 used,  4614424 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  7207548 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+     16 root      20   0   11704   2580   2452 R  25.0  0.0   2:34.53 spin.sh
+     18 root      20   0   11704   2568   2440 R  25.0  0.0   0:15.20 spin.sh
+     19 root      20   0   11704   2624   2496 R  25.0  0.0   0:15.20 spin.sh
+     20 root      20   0   11704   2568   2440 R  25.0  0.0   0:15.20 spin.sh
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.01 bash
+     30 root      20   0   56068   3648   3264 R   0.0  0.0   0:00.00 top
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+[root@ca900302a985 src] kill -9 16 18 19 20
+[root@ca900302a985 src]# nice -n 2 ./spin.sh &
+[1] 43
+[root@ca900302a985 src]# nice -n 4 ./spin.sh &
+[2] 44
+[root@ca900302a985 src]# nice -n 6 ./spin.sh &
+[3] 45
+[root@ca900302a985 src]# nice -n -2 ./spin.sh &
+[4] 46
+
+top - 23:14:52 up 11:29,  0 users,  load average: 4.08, 3.30, 2.17
+Tasks:   6 total,   5 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 13.6 us,  1.6 sy,  5.6 ni, 77.6 id,  0.0 wa,  0.0 hi,  1.6 si,  0.0 st
+KiB Mem : 15714796 total,  3257392 free,  7843452 used,  4613952 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  7172644 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+     46 root      18  -2   11704   2468   2340 R  53.3  0.0   0:14.04 spin.sh
+     43 root      22   2   11704   2480   2352 R  20.0  0.0   0:10.27 spin.sh
+     44 root      24   4   11704   2568   2440 R  20.0  0.0   0:05.41 spin.sh
+     45 root      26   6   11704   2572   2444 R  13.3  0.0   0:02.74 spin.sh
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.03 bash
+     48 root      20   0   56068   3520   3136 R   0.0  0.0   0:00.00 top
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+[root@ca900302a985 src]# renice -n -10 -p 46
+46 (process ID) old priority -2, new priority -10
+
+top - 23:15:45 up 11:30,  0 users,  load average: 4.45, 3.55, 2.33
+Tasks:   6 total,   5 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 15.4 us,  0.8 sy,  1.5 ni, 81.5 id,  0.0 wa,  0.0 hi,  0.8 si,  0.0 st
+KiB Mem : 15714796 total,  3295088 free,  7805732 used,  4613976 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  7210556 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+     46 root      10 -10   11704   2468   2340 R  88.2  0.0   0:46.72 spin.sh
+     43 root      22   2   11704   2480   2352 R   5.9  0.0   0:20.27 spin.sh
+     44 root      24   4   11704   2568   2440 R   5.9  0.0   0:11.87 spin.sh
+     45 root      26   6   11704   2572   2444 R   5.9  0.0   0:06.89 spin.sh
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.03 bash
+     50 root      20   0   56068   3780   3396 R   0.0  0.0   0:00.00 top
+
+
+
+
+■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+[root@ca900302a985 src]# renice -n -5 -p 45
+45 (process ID) old priority 6, new priority -5
+
+top - 23:17:29 up 11:32,  0 users,  load average: 4.70, 3.93, 2.59
+Tasks:   6 total,   5 running,   1 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 24.7 us,  6.5 sy,  1.3 ni, 64.9 id,  1.3 wa,  0.0 hi,  1.3 si,  0.0 st
+KiB Mem : 15714796 total,  2862580 free,  8236768 used,  4615448 buff/cache
+KiB Swap:  2097148 total,  2096636 free,      512 used.  6778492 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+     46 root      10 -10   11704   2468   2340 R  68.4  0.0   2:15.89 spin.sh
+     45 root      15  -5   11704   2572   2444 R  21.1  0.0   0:12.05 spin.sh
+     43 root      22   2   11704   2480   2352 R   5.3  0.0   0:26.39 spin.sh
+     44 root      24   4   11704   2568   2440 R   5.3  0.0   0:15.82 spin.sh
+      1 root      20   0   11844   2944   2560 S   0.0  0.0   0:00.03 bash
+     52 root      20   0   56068   3704   3320 R   0.0  0.0   0:00.00 top

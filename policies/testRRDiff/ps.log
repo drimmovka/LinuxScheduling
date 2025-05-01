@@ -1,0 +1,15 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 136406  136406    1      -   0 TS    5 sudo
+ 136407  136407   11      -   0 TS    0 policy
+ 136407  136409   11     30   - RR    0 policy
+ 136407  136410   11     90   - RR    0 policy
+ 136407  136411   11     30   - RR    0 policy
+ 136407  136412   11     40   - RR    0 policy
+ 136407  136413   11     40   - RR    0 policy
+ 136407  136414   11     30   - RR    0 policy
+ 136407  136415   11     30   - RR    0 policy
+ 136407  136416   11     90   - RR    0 policy
+ 136407  136417   11     90   - RR    0 policy
+ 136407  136418   11     30   - RR    0 policy
+ 136419  136419    1      -   0 TS    0 sh
+ 136429  136429    1      -   0 TS    0 ps

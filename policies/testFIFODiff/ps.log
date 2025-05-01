@@ -1,0 +1,15 @@
+    PID     LWP NLWP RTPRIO  NI POL PSR COMMAND
+ 131221  131221    1      -   0 TS    2 sudo
+ 131222  131222   11      -   0 TS    0 policy
+ 131222  131224   11     30   - FF    0 policy
+ 131222  131225   11     90   - FF    0 policy
+ 131222  131226   11     30   - FF    0 policy
+ 131222  131227   11     40   - FF    0 policy
+ 131222  131228   11     40   - FF    0 policy
+ 131222  131229   11     30   - FF    0 policy
+ 131222  131230   11     30   - FF    0 policy
+ 131222  131231   11     90   - FF    0 policy
+ 131222  131232   11     90   - FF    0 policy
+ 131222  131233   11     30   - FF    0 policy
+ 131234  131234    1      -   0 TS    0 sh
+ 131235  131235    1      -   0 TS    0 ps
